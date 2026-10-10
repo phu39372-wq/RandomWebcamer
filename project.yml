@@ -1,31 +1,24 @@
-name: RandomWebcam
+name: DarkBasement
 options:
   bundleIdPrefix: com.example
   deploymentTarget:
     iOS: "16.0"
-
-configs:
-  Debug: debug
-  Release: release
-
 targets:
-  RandomWebcam:
+  DarkBasement:
     type: application
     platform: iOS
-    sources:
-      - Sources
+    sources: [Sources]
     settings:
       base:
-        PRODUCT_BUNDLE_IDENTIFIER: com.example.randomwebcam
-        SWIFT_VERSION: 5.0
-        TARGETED_DEVICE_FAMILY: "1,2"
-        INFOPLIST_FILE: Sources/Info.plist
-        GENERATE_INFOPLIST_FILE: NO
-      configs:
-        Debug:
-          CODE_SIGNING_ALLOWED: NO
-        Release:
-          CODE_SIGNING_ALLOWED: NO
-    configFiles:
-      Debug: Config.xcconfig
-      Release: Config.xcconfig
+        PRODUCT_BUNDLE_IDENTIFIER: com.example.darkbasement
+        MARKETING_VERSION: "1.0"
+        CURRENT_PROJECT_VERSION: "1"
+        GENERATE_INFOPLIST_FILE: YES
+        INFOPLIST_KEY_UILaunchScreen_Generation: YES
+        INFOPLIST_KEY_CFBundleDisplayName: "Тёмный подвал"
+        INFOPLIST_KEY_UIApplicationSceneManifest_Generation: YES
+        INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents: YES
+        INFOPLIST_KEY_UISupportedInterfaceOrientations: "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight"
+        INFOPLIST_KEY_UIStatusBarHidden: YES
+        INFOPLIST_KEY_UIRequiresFullScreen: YES
+        SWIFT_VERSION: "5.0"
